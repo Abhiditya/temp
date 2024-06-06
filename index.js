@@ -70,7 +70,7 @@ function getLevel(){
     let diff;
     switch(level){
         case "easy":
-            diff=40;
+            diff=1;
             break;
         case "medium":
             diff=55;
