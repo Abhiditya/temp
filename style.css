@@ -9,8 +9,6 @@ body{
     text-align: center;
     flex-direction: column;
     align-items: center;
-    display: flex;
-    flex-direction: column;
     justify-content: center;
     height: 100vh;
     overflow: hidden;
@@ -82,7 +80,7 @@ select:hover {
     max-width: 460px;
     max-height: 460px;
     display: grid;
-    margin: 4vw;
+    margin: 0 auto;
     grid-template-columns: repeat(9, 1fr);
     grid-template-rows: repeat(9, 1fr);
     background-color: black;
@@ -127,10 +125,6 @@ select:hover {
 }
 
 button{
-    justify-content: center;
-    align-items: center;
-    align-content: center;
-    margin: 4vw;
     height: 40px;
     width: 130px;
     font-size: 15px;
@@ -141,18 +135,13 @@ button{
 
 button:hover{
     transform: scale(1.1);
-    cursor: pointer;
 }
 
 #board-overlay {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vw;
-    max-width: 460px;
-    max-height: 460px;
-    margin: 4vw;
+    display: flex;
+    width: 460px;
+    height: 460px;
     background: rgba(0, 0, 0, 0.6);
     justify-content: center;
     align-items: center;
@@ -160,19 +149,16 @@ button:hover{
     font-size: 30px;
     font-weight: bold;
     display: none;
-    z-index: 1;
 }
 
 #overlay{
     position: relative;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
 @media (max-width: 600px) {
-
     h1 {
         font-size: 24px;
     }
@@ -182,6 +168,11 @@ button:hover{
         right: 5px;
     }
 
+    select {
+        font-size: 12px;
+        padding: 3px 5px;
+    }
+
     #errors {
         font-size: 25px;
     }
@@ -189,11 +180,6 @@ button:hover{
     button {
         height: 45px;
         width: 100px;
-        flex-direction: column;
-        margin-top: 10px;
         font-size: 14px;
-    }
-    #board-overlay {
-        font-size: 24px;
     }
 }
